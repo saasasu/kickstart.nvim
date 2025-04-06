@@ -1396,5 +1396,9 @@ require("lazy").setup({
   },
 })
 
+-- More visible (relative) line number color above and below
+vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#7da6ff" })
+vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#7da6ff" })
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
