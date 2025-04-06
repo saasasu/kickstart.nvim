@@ -22,6 +22,12 @@ return {
       view_options = {
         show_hidden = true,
       },
+      keymaps = {
+        -- Disable built-in keymaps due to overlapping with other keymaps
+        ["<C-s>"] = false,
+        ["<C-h>"] = false,
+        ["<C-l>"] = false,
+      },
     },
     -- Optional dependencies
     dependencies = { { "echasnovski/mini.icons", opts = {} } },
