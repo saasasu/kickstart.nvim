@@ -317,6 +317,14 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   end,
 })
 
+-- Treat all .html files as plain html even if they have Jinja (etc.) syntax
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = "*.html",
+  callback = function()
+    vim.bo.filetype = "html" -- Force filetype to plain HTML
+  end,
+})
+
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
@@ -928,7 +936,7 @@ require("lazy").setup({
             },
           },
         },
-        html = {},
+        html = { filetypes = { "html", "htmldjango" } },
         cssls = {},
         hls = {},
         eslint = {},
@@ -1044,6 +1052,7 @@ require("lazy").setup({
         haskell = { "fourmolu", "stylish-haskell" },
         css = { "prettierd" },
         html = { "prettierd" },
+        htmldjango = { "prettierd" },
         yaml = { "prettierd" },
         json = { "prettierd" },
         javascript = { "prettierd" },
@@ -1300,6 +1309,7 @@ require("lazy").setup({
         "c",
         "diff",
         "html",
+        "htmldjango",
         "lua",
         "luadoc",
         "markdown",
@@ -1315,6 +1325,8 @@ require("lazy").setup({
         "gotmpl",
         "gowork",
         "haskell",
+        "jinja",
+        "jinja_inline",
         "make",
         "printf",
         "python",
