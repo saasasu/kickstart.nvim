@@ -263,47 +263,47 @@ vim.keymap.set(
 vim.keymap.set("n", "<C-k>", "<cmd> TmuxNavigateUp<CR>", { desc = "window up" })
 
 -- Copilot keybinds
-vim.keymap.set("i", "<C-c>", 'copilot#Accept("\\<CR>")', {
-  expr = true,
-  replace_keycodes = false,
-  desc = "copilot accept",
-})
-vim.keymap.set(
-  "i",
-  "<M-C-down>",
-  "<Plug>(copilot-next)",
-  { desc = "copilot next" }
-)
-vim.keymap.set(
-  "i",
-  "<M-C-up>",
-  "<Plug>(copilot-previous)",
-  { desc = "copilot previous" }
-)
-vim.keymap.set(
-  "i",
-  "<C-x>",
-  "<Plug>(copilot-dismiss)",
-  { desc = "copilot dismiss" }
-)
-vim.keymap.set(
-  "i",
-  "<C-s>",
-  "<Plug>(copilot-suggest)",
-  { desc = "copilot suggest" }
-)
-vim.keymap.set(
-  "i",
-  "<M-C-left>",
-  "<Plug>(copilot-accept-word)",
-  { desc = "copilot accept word" }
-)
-vim.keymap.set(
-  "i",
-  "<M-C-right>",
-  "<Plug>(copilot-accept-line)",
-  { desc = "copilot accept line" }
-)
+-- vim.keymap.set("i", "<C-c>", 'copilot#Accept("\\<CR>")', {
+--   expr = true,
+--   replace_keycodes = false,
+--   desc = "copilot accept",
+-- })
+-- vim.keymap.set(
+--   "i",
+--   "<M-C-down>",
+--   "<Plug>(copilot-next)",
+--   { desc = "copilot next" }
+-- )
+-- vim.keymap.set(
+--   "i",
+--   "<M-C-up>",
+--   "<Plug>(copilot-previous)",
+--   { desc = "copilot previous" }
+-- )
+-- vim.keymap.set(
+--   "i",
+--   "<C-x>",
+--   "<Plug>(copilot-dismiss)",
+--   { desc = "copilot dismiss" }
+-- )
+-- vim.keymap.set(
+--   "i",
+--   "<C-s>",
+--   "<Plug>(copilot-suggest)",
+--   { desc = "copilot suggest" }
+-- )
+-- vim.keymap.set(
+--   "i",
+--   "<M-C-left>",
+--   "<Plug>(copilot-accept-word)",
+--   { desc = "copilot accept word" }
+-- )
+-- vim.keymap.set(
+--   "i",
+--   "<M-C-right>",
+--   "<Plug>(copilot-accept-line)",
+--   { desc = "copilot accept line" }
+-- )
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`

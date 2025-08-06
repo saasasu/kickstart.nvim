@@ -61,18 +61,18 @@ return {
     end,
   },
   {
-    "github/copilot.vim",
-    event = "VeryLazy",
-    config = function()
-      vim.g.copilot_no_tab_map = true
-      vim.g.copilot_enabled = false
-    end,
-  },
-  {
     "rust-lang/rust.vim",
     ft = "rust",
     init = function()
       vim.g.rustfmt_autosave = 1
     end,
   },
+  --  {
+  --    "github/copilot.vim",
+  --    event = "VeryLazy",
+  --    config = function()
+  --      vim.g.copilot_no_tab_map = true
+  --      vim.g.copilot_enabled = false
+  --    end,
+  --  },
 }
